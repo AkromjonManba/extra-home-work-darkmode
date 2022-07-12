@@ -1,0 +1,79 @@
+*,*::before, *::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+body.dark {
+    background-color: black;
+    color: aliceblue;
+}
+
+.box {
+    border: 1px solid red;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.mode-btn {
+    width: 55px;
+    height: 27px;
+    border: 2px solid;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #111;
+    background-color: #fff;
+    position: relative;
+}
+.mode-btn::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 0;
+    top: 2px;
+    background: #000;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+} 
+
+.mode-btn.active::before {
+    left: 25px;
+    /* background-color: #fff; */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column;
+}
+
+.wrapper p {
+    max-width: 500px;
+    line-height: 150%;
+}
